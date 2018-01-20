@@ -18,7 +18,7 @@
                         </div>    
                         <div class="col-md-10">
                            <div class="topic-content pull-right">
-                               <h3><a href="topic.html"><?php echo $topic->title; ?></a></h3>
+                               <h3><a href="topic.php?id=<?php echo $topic->id; ?>"><?php echo $topic->title; ?></a></h3>
                                 <div class="topic-info">
                                 <a href="topics.php?category=<?php echo urlFormat($topic->category_id);?>">
                                 <?php echo $topic->catename ?></a> >> 
@@ -41,7 +41,7 @@
             <!-- statics -->
             <h3>Forum Statistics </h3>
             <ul>
-              <li>Total Number of Users: <strong>52</strong></li>
+              <li>Total Number of Users: <strong><?php echo $totalUsers; ?></strong></li>
               <li>Total Number of Topics: <strong><?php echo $totalTopics; ?></strong></li>
               <li>Total Number of Categories: <strong><?php echo $totalCategories; ?></strong></li>    
             </ul>

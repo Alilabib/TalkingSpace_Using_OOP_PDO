@@ -22,4 +22,28 @@
        
        return $results;
    }
+    
+    /*
+     * Users Posts
+     */
+     function userPostCount($user_id){
+            $db = new Database;
+            
+            $db->query("SELECT * FROM talkingspace.topics WHERE user_id = :user_id");
+            
+            $db->bind(':user_id', $user_id);
+             //Assign Rows 
+            $rows = $db->resultset();
+             //Get topics Count 
+            $topic_count = $db->rowCount();
+            
+            $db->query("SELECT * FROM talkingspace.replies WHERE user_id= :user_id");
+            
+            $db->bind(':user_id', $user_id);
+            //Assign Rows 
+            $rows = $db->resultset();
+            //Get Count
+            $replies_count = $db->rowCount();
+            return $topic_count + $replies_count;
+        }    
 ?>

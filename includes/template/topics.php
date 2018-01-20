@@ -17,7 +17,7 @@
                         </div>    
                         <div class="col-md-10">
                            <div class="topic-content pull-right">
-                               <h3><a href="topic.html"><?php echo $topic->title; ?></a></h3>
+                               <h3><a href="topic.php?topicid=<?php echo $topic->id; ?>"><?php echo $topic->title; ?></a></h3>
                                 <div class="topic-info">
                                 <a href="topics.php?category=<?php echo urlFormat($topic->category_id);?>">
                                 <?php echo $topic->catename ?></a> >> 

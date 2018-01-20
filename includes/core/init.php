@@ -13,7 +13,6 @@
     //Autoload Classes     
     function __autoload($class_name){
             require_once('includes/libraries/'.$class_name.'.php');
-            
     }
 
 ?>

@@ -35,9 +35,11 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.php">Home</a></li>
+                        <?php if(!isLoggedIn()){ ?>
                         <li><a href="register.php">Create Account <i class="fa fa-user-plus"></i></a></li>
+                        <?php }else{ ?>
                         <li><a href="create.php">Create a Topic    <i class="fa fa-calendar"></i></a></li>
-                        
+                        <?php } ?>
                     </ul>
                 </div><!--/ .navbar-collapse -->
             </div>
@@ -57,5 +59,5 @@
                                 <h4 class="pull-right">A Simple PHP Forum Engine</h4>
                                 <div class="clearfix"></div>   
                                 <hr>
-                                
+                                <?php displayMessage(); ?>
         
